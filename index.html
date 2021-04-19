@@ -72,6 +72,27 @@
             background-color: #21333e !important;
             }
             
+            
+            
+
+.message {
+  font-size: 4rem;
+  display: none;
+  padding: 1rem;
+}
+
+.emoji {
+  padding: 0 .25rem;
+}
+
+
+
+
+
+
+
+
+            
         </style>
         
     </head>
@@ -135,7 +156,7 @@
                             <a href="#footer" class="smooth-anchor nav-link">Charts</a>
                         </li>
                         <li class="nav-item ml-3">
-                            <a href="https://bscscan.com/address/0xc71B3c4658C6597D722A47C13B31bdF16B7a1810" class="btn ml-lg-auto primary-button" target="_blank">Buy Token</a>
+                            <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xc71B3c4658C6597D722A47C13B31bdF16B7a1810" class="btn ml-lg-auto primary-button" target="_blank">Buy Token</a>
                         </li>
                     </ul>
 
@@ -190,7 +211,26 @@
             </div>
         </section>
         
-
+ <!-- <section id="skillss" class="section-2 odd highlights image-right counter skills featured">        
+<div class="container">
+  <h1 id="headline">Countdown to Presale:</h1>
+  <div id="countdown">
+    <ul>
+      <li><span id="days"></span>days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
+  </div>
+  <div class="message">
+    <div id="content">
+      <span class="emoji">i</span>
+      <span class="emoji">jh</span>
+      <span class="emoji">gft</span>
+    </div>
+  </div>
+</div>
+</section> --> 
         
 
         <!-- Skills -->
@@ -340,13 +380,15 @@ The interoperability of Binance Smart Chain offers users the opportunity of acce
                                     <span class="last">Protocol</span>
                                 </span>
                                  </a>
+                                 
+                                 
                            
                            
                             <p>BUY $CHASE ON PANCAKESWAP</p>
                             <ul class="navbar-nav">
                             <center>
                             <li class="nav-item">
-                                    <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x18c6c1bd04ccb4c2cff2d5450f3ee4174a1a0c32" class="mt-4 btn outline-button" target="_blank">Buy Token</a>
+                                    <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xc71B3c4658C6597D722A47C13B31bdF16B7a1810" class="mt-4 btn outline-button" target="_blank">Buy Token</a>
                                 </li>
                                 </center>
                                 </ul>
@@ -431,13 +473,18 @@ The interoperability of Binance Smart Chain offers users the opportunity of acce
             <section id="copyright" class="p-3 odd copyright">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-md-6 p-3 text-center text-lg-left">
+                        <div class="col-12 col-md-4 p-3 text-center text-lg-left">
                             <p>All Rights Reserved</p>
                             <!--
                                 Suggestion: Replace the text above with a description of your website.
                              -->
                         </div>
-                        <div class="col-12 col-md-6 p-3 text-center text-lg-right">
+                        
+                        <div class="col-12 col-md-4 p-3 text-center text-lg-center">
+                            <img src="assets/images/chase-protocol2.png" width="150" height="150">
+                        </div>
+                       
+                        <div class="col-12 col-md-4 p-3 text-center text-lg-right">
                             <p>© Copyright Chase Protocol (2021).</p>
                         </div>
                     </div>
@@ -513,6 +560,42 @@ The interoperability of Binance Smart Chain offers users the opportunity of acce
         <script src="assets/js/vendor/cookie-notice.min.js"></script>
         <script src="assets/js/vendor/particles.min.js"></script>
         <script src="assets/js/main.js"></script>
+        
+        <script type="text/javascript">
+        (function () {
+              const second = 1000,
+                    minute = second * 60,
+                    hour = minute * 60,
+                    day = hour * 24;
+
+              let birthday = "Apr 19, 2021 12:06:59",
+                  countDown = new Date(birthday).getTime(),
+                  x = setInterval(function() {    
+
+                    let now = new Date().getTime(),
+                        distance = countDown - now;
+
+                    document.getElementById("days").innerText = Math.floor(distance / (day)),
+                      document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                      document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                      document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                    //do something later when date is reached
+                    if (distance < 0) {
+                      let headline = document.getElementById("headline"),
+                          countdown = document.getElementById("countdown"),
+                          content = document.getElementById("content");
+
+                      headline.innerText = "Presale is live!";
+                      countdown.style.display = "none";
+                      content.style.display = "block";
+
+                      clearInterval(x);
+                    }
+                    //seconds
+                  }, 0)
+              }());
+        </script>
 
     </body>
 </html>
